@@ -1,39 +1,40 @@
-var kittens = ["Milo", "Otis", "Garfield"] //define your array here
 
-// Add your functions and code here
-function destructivelyAppendKitten(name){
-  //appends a kitten to the end of the array
-  return kittens.push(name)
+ var kittens = ["Milo", "Otis", "Garfield"];
+
+ function destructivelyAppendKitten(name){
+  kittens.push(name);
+  return kittens
 }
-function destructivelyPrependKitten(name){
-  //prepends a kitten to the beginning of the kittens array
-  return kittens.unshift(name)
+
+ function destructivelyPrependKitten(name){
+  kittens.unshift(name);
+  return kittens
 }
-function destructivelyRemoveLastKitten(){
-  //removes the last kitten from the kittens array
-  return kittens.pop()
+
+ function destructivelyRemoveLastKitten(){
+  kittens.pop();
+  return kittens
 }
-function destructivelyRemoveFirstKitten(){
-  //removes the first Kitten from the kittens array
-  return kittens.shift()
+
+ function destructivelyRemoveFirstKitten(name){
+  kittens.shift();
+  return kittens
 }
-function appendKitten(name){
-//appends a kitten to the kitten to the kittens array and returns a new array.
-return [...kittens, name]
+
+ function appendKitten(name){
+  return [...kittens, name]
 }
-function prependKitten(name){
-  //prepends a kitten to the kittens array and returns a new array leaving the
-  // kittens array unchanged
+
+ function prependKitten(name){
   return [name, ...kittens]
 }
-removeLastKitten(){
-  //removes the last kitten in the kittens array and returns a new
-//array, leaving the kittens array unchanged
-return kittens.slice(0, kittens.length - 1)
+
+ function removeLastKitten(name){
+  var newArray = kittens.slice(0, kittens.length - 1);
+  return newArray
 }
 
-function removeFirstKitten(){
-  //removes the first kitten from the kittens array and returns a
-//new array, leaving the kittens array unchanged
-return kittens.slice(1)
+ function removeFirstKitten(name){
+  var newArray = kittens.slice(1);
+  return newArray
 }
